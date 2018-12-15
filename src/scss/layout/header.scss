@@ -1,0 +1,9 @@
+.header{
+    background: green;
+    animation: header-out 1s forwards;
+    animation-fill-mode: both;
+    .selected &{
+        animation: header-init 1s forwards;
+        animation-fill-mode: both;
+    }
+}
