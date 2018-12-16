@@ -24,10 +24,13 @@ $base: (
   'base-font-serif': unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
   'base-text-color': #333,
   'base-background-color': #fff,
-  'base-link-color':#39f,
+  'base-link-color':#333,
   'base-font-size': 24px,
   'base-line-height': 1.25,
   'base-font-family': unquote("'calibri_light', Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'bold-font-family': unquote("'calibri_bold', Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'regular-font-family': unquote("'calibri_regular', Arial, 'Helvetica Neue', Helvetica, sans-serif"),
+  'secondary-font-family': unquote("'exo_2bold', Arial, 'Helvetica Neue', Helvetica, sans-serif"),
   'base-min-width': 320px
 );
 
@@ -58,3 +61,7 @@ $media-expressions: (
   'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
   'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
 );
+
+// colors
+$white: #fff;
+$black: #000;

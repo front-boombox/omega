@@ -15,7 +15,16 @@
         z-index: 2;
     }
     &.first{
-        background: url(../images/main-img.jpg) no-repeat 50% 50%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
         background-size: cover;
+    }
+    .main-title{
+        font: 59px/1.25 map-get($base, 'bold-font-family');
+        letter-spacing: normal;
+        color: $white;
+        text-transform: uppercase;
+        margin: 13% 0 0;
+        max-width: 370px;
     }
 }

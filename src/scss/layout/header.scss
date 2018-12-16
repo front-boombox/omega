@@ -1,9 +1,41 @@
 .header{
-    background: green;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
     animation: header-out 1s forwards;
     animation-fill-mode: both;
     .selected &{
         animation: header-init 1s forwards;
         animation-fill-mode: both;
+    }
+    .logo{
+        flex: 0 0 auto;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .login-link{
+        @include animate(opacity);
+        font: 18px/1 map-get($base, 'bold-font-family');
+        letter-spacing: normal;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        flex: 0 0 auto;
+        position: relative;
+        padding: 0 0 0 55px;
+        &:hover{
+            opacity: 0.73;
+        }
+        .ico{
+            font-size: 44px;
+            position: absolute;
+            top: -4px;
+            left: 0;
+        }
     }
 }
