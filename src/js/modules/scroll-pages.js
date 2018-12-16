@@ -6,7 +6,7 @@ var scrollPages = {
             return;
         }
 
-        var delay = 2000;
+        var delay = 1000;
         var timeoutId;
         var animationIsFinished = false;
 
@@ -15,8 +15,8 @@ var scrollPages = {
             sectionName: "section-name",
             easing: "easeOutExpo",
             scrollSpeed: 500,
-            scrollbars: false,
             updateHash: false,
+            overflowScroll: true,
             before: function(index) {
                 let items = $('.full-section');
                 let item = $($('.full-section').get(index));
@@ -28,8 +28,10 @@ var scrollPages = {
                     animationIsFinished = true;
                     if(index === 1){
                         $.scrollify.move("#second");
-                    } else if(index === 2){
+                        $('.header').addClass('header-dark');
+                    } else if(index === 0){
                         $.scrollify.move("#first");
+                        $('.header').removeClass('header-dark');
                     }
                 }, delay);
                 return animationIsFinished;

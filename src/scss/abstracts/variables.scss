@@ -24,7 +24,7 @@ $base: (
   'base-font-serif': unquote("'Times New Roman', Times, Baskerville, Georgia, serif"),
   'base-text-color': #333,
   'base-background-color': #fff,
-  'base-link-color':#333,
+  'base-link-color':#002566,
   'base-font-size': 24px,
   'base-line-height': 1.25,
   'base-font-family': unquote("'calibri_light', Arial, 'Helvetica Neue', Helvetica, sans-serif"),
@@ -65,3 +65,4 @@ $media-expressions: (
 // colors
 $white: #fff;
 $black: #000;
+$blue: #002566;

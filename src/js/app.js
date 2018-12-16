@@ -4,6 +4,7 @@
 // Feel free with using ES6 here.
 
 import scrollPages from './modules/scroll-pages';
+import muteVideo from './modules/mute-video';
 
 ( ($) => {
   'use strict';
@@ -11,6 +12,7 @@ import scrollPages from './modules/scroll-pages';
   // When DOM is ready
   $(() => {
     scrollPages.scrollPagesInit();
+    muteVideo.muteVideoInit();
   });
 
 })(jQuery);

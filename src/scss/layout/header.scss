@@ -4,14 +4,36 @@
     left: 0;
     z-index: 3;
     width: 100%;
-    animation: header-out 1s forwards;
+    animation: header-init 1s forwards;
     animation-fill-mode: both;
+    &.header-dark{
+        .login-link{
+            color: map-get($base, 'base-text-color');
+            &:hover{
+                color: $blue;
+                border-color: $blue;
+            }
+        }
+        .logo{
+            .ico{
+                color: $blue;
+            }
+        }
+    }
     .selected &{
         animation: header-init 1s forwards;
         animation-fill-mode: both;
     }
     .logo{
         flex: 0 0 auto;
+        a{
+            text-decoration: none;
+        }
+        .ico{
+            @include animate(color);
+            font-size: 85px;
+            color: $white;
+        }
     }
     .container{
         display: flex;
@@ -19,7 +41,7 @@
         align-items: flex-end;
     }
     .login-link{
-        @include animate(border-color);
+        @include animate(border-color color);
         font: 18px/1 map-get($base, 'bold-font-family');
         letter-spacing: normal;
         color: $white;

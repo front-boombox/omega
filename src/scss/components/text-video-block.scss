@@ -1,0 +1,48 @@
+.text-video-block{
+    padding-top: 170px;
+    margin-bottom: 78px;
+    .container-big{
+        display: flex;
+        justify-content: space-between;
+    }
+    .text-holder{
+        width: 65%;
+        background: url(../images/logo-bg.png) no-repeat 0 0;
+        padding: 2.35% 0 0 6.5%;
+        p{
+            margin: 0 0 30px;
+        }
+        .link-holder{
+            text-align: right;
+            margin-top: 69px;
+        }
+        .more-link{
+            @extend .icon-arrow-right;
+            font: 24px/1.25 map-get($base, 'regular-font-family');
+            letter-spacing: normal;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            padding-right: 70px;
+            &:before{
+                @include animate(transform);
+                font: 25px 'icomoon';
+                position: absolute;
+                top: 5px;
+                right: 36px;
+            }
+            &:hover{
+                &:before{
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+    .video-holder{
+        width: 32%;
+        .thumb-video{
+            border-radius: 8px;
+            box-shadow: 5px 50px 75px -40px #054bc5;
+        }
+    }
+}
