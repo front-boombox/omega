@@ -19,7 +19,7 @@
         align-items: flex-end;
     }
     .login-link{
-        @include animate(opacity);
+        @include animate(border-color);
         font: 18px/1 map-get($base, 'bold-font-family');
         letter-spacing: normal;
         color: $white;
@@ -27,9 +27,11 @@
         text-transform: uppercase;
         flex: 0 0 auto;
         position: relative;
-        padding: 0 0 0 55px;
+        padding: 0 0 5px 55px;
+        margin-bottom: -8px;
+        border-bottom: 2px solid transparent;
         &:hover{
-            opacity: 0.73;
+            border-color: $white;
         }
         .ico{
             font-size: 44px;
