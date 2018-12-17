@@ -1,3 +1,40 @@
 .footer{
-    
+    color: $white;
+    background: $blue;
+    padding: 38px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1780px;
+    }
+    a{
+        color: $white;
+    }
+    .logo-footer{
+        font-size: 31px;
+        color: $white;
+        flex: 0 0 auto;
+        margin-right: 15px;
+    }
+    .social{
+        font-size: 24px;
+        margin: 0;
+        flex-direction: row;
+        animation: none;
+        a{
+            color: $white;
+        }
+    }
+    .item{
+        display: flex;
+        .title-footer{
+            font: normal 18px/1.1 map-get($base, 'bold-font-family');;
+            letter-spacing: normal;
+            display: block;
+        }
+        .simple-footer-text{
+            font: normal 18px/1.33 map-get($base, 'base-font-family');;
+            letter-spacing: normal;
+        }
+    }
 }

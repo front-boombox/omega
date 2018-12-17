@@ -1,6 +1,6 @@
 .info-line{
     background: #f2f4f7;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     .info-list{
         @extend %listreset;
         display: flex;
@@ -9,9 +9,9 @@
         width: 25%;
     }
     a{
-        width: calc(100% - 40px);
-        padding: 56px 15px;
-        margin: 0 20px;
+        width: calc(100% - 140px);
+        padding: 36px 15px;
+        margin: 0 70px;
         display: inline-block;
         text-decoration: none;
         position: relative;
@@ -19,9 +19,9 @@
             @include animate(opacity visibility);
             content: '';
             position: absolute;
-            top: -20px;
+            top: -10px;
             left: 0;
-            bottom: -20px;
+            bottom: -10px;
             right: 0;
             border-radius: 8px;
             background: $white;

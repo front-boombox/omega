@@ -1,4 +1,5 @@
 .animate-block{
+  margin-bottom: 38px;
     .container-big{
         display: flex;
         justify-content: space-between;
@@ -6,7 +7,6 @@
     figure{
         &.snip0016{
             &:hover{
-                transform: translateY(0);
                 .first-title{
                     animation: fade-out 0.35s forwards;
                     animation-fill-mode: both;
@@ -18,7 +18,7 @@
                 font: 30px/1.25 map-get($base, 'bold-font-family');
                 text-transform: uppercase;
                 position: absolute;
-                top: 21%;
+                top: 19%;
                 left: 17%;
                 right: 14%;
                 opacity: 1;
@@ -31,16 +31,14 @@
     }
 }
 figure.snip0016 {
-    @include animate(transform);
     width: 32%;
     color: #fff;
     position: relative;
     overflow: hidden;
     margin: 0;
     background: $blue;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
     text-align: left;
-    transform: translateY(50px);
   }
   figure.snip0016 * {
     -webkit-box-sizing: border-box;
@@ -66,7 +64,7 @@ figure.snip0016 {
     position: absolute;
     top: 40px;
     right: 30px;
-    bottom: 40px;
+    bottom: 80px;
     left: 100%;
     border-left: 4px solid rgba(255, 255, 255, 0.8);
     content: '';

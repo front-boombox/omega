@@ -15,7 +15,7 @@
         &.active{
             a{
                 border-color: $white;
-                .header-dark &{
+                .hide-section &{
                     color: $blue;
                     border-color: $blue;
                 }
@@ -30,12 +30,12 @@
         padding-bottom: 4px;
         &:hover{
             border-color: $white;
-            .header-dark &{
+            .hide-section &{
                 color: $blue;
                 border-color: $blue;
             }
         }
-        .header-dark &{
+        .hide-section &{
             color: map-get($base, 'base-text-color');
         }
     }

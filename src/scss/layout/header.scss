@@ -1,12 +1,16 @@
 .header{
+    @include animate(background);
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 4;
     width: 100%;
+    height: 110px;
+    background: transparent;
     animation: header-init 1s forwards;
     animation-fill-mode: both;
-    &.header-dark{
+    .hide-section &{
+        background: $white;
         .login-link{
             color: map-get($base, 'base-text-color');
             &:hover{
