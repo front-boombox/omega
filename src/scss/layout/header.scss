@@ -6,11 +6,13 @@
     z-index: 4;
     width: 100%;
     height: 110px;
+    padding-right: 17px;
     background: transparent;
     animation: header-init 1s forwards;
     animation-fill-mode: both;
     .hide-section &{
         background: $white;
+        padding-right: 0;
         .login-link{
             color: map-get($base, 'base-text-color');
             &:hover{

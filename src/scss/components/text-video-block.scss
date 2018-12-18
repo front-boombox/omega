@@ -65,5 +65,24 @@
             border-radius: 8px;
             box-shadow: 5px 50px 75px -40px #054bc5;
         }
+        a{
+            @include animate(opacity);
+            @extend .icon-play-circle-outline;
+            cursor: pointer;
+            display: block;
+            position: relative;
+            &:hover{
+                opacity: 0.73;
+            }
+            &:before{
+                opacity: 0.73;
+                color: $white;
+                font: 45px 'icomoon';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
 }

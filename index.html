@@ -67,7 +67,15 @@
 						</div>
 					</div>
 					<div class="video-holder">
-						<img src="assets/images/thumb-video.jpg" class="thumb-video" alt="Video">
+						<a data-fancybox data-src="#video" class="fancybox">
+							<img src="assets/images/thumb-video.jpg" class="thumb-video" alt="Video">
+						</a>
+						<div id="video" style="display: none;">
+							<video id="myVideo" width="960" controls>
+								<source src="assets/media/main-video.mp4" type="video/mp4">          
+								Your browser does not support HTML5 videos.
+							</video>
+						</div>
 					</div>
 				</div>
 				<span class="scroll-up">

@@ -1,0 +1,26 @@
+.fancybox-bg{
+    background: $black;
+    .fancybox-is-open &{
+        opacity: 0.8;
+    }
+}
+.fancybox-content{
+    padding: 0;
+    box-shadow: 5px 50px 75px -40px #054bc5;
+}
+.fancybox-close-small{
+    @include animate(opacity);
+    @extend .icon-close;
+    position: fixed;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:before{
+        color: $white;
+        font: 35px 'icomoon';
+    }
+    &:hover{
+        opacity: 0.73;
+    }
+}
