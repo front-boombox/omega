@@ -6,6 +6,8 @@ var removeScroll = {
             return;
         }
 
+        var ts;
+
         $(window).on('DOMMouseScroll mousewheel', function (e) {
             if (true) {
                 if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
