@@ -23,23 +23,19 @@ var removeScroll = {
             return true;
         });
         $(document).bind('touchstart', function (e) {
-            if(!$(e.target).hasClass('burger-btn')){
-                ts = e.originalEvent.touches[0].clientY;
-            }
+            ts = e.originalEvent.touches[0].clientY;
         });
 
         $(document).bind('touchend', function (e) {
-            if(!$(e.target).hasClass('burger-btn')){
-                var te = e.originalEvent.changedTouches[0].clientY;
-                if (ts > te + 10) {
-                    var $fullSectionWrap = $('.full-section');
-                    $secondSectionWrap = $('.second-section');
-                    $body = $('body');
-                    if (!$body.hasClass("hide-section")) {
-                        $body.addClass('hide-section');
-                        $fullSectionWrap.fadeOut(1000);
-                        $body.css({ 'overflow-y': 'scroll' });
-                    }
+            var te = e.originalEvent.changedTouches[0].clientY;
+            if (ts > te + 10) {
+                var $fullSectionWrap = $('.full-section');
+                $secondSectionWrap = $('.second-section');
+                $body = $('body');
+                if (!$body.hasClass("hide-section")) {
+                    $body.addClass('hide-section');
+                    $fullSectionWrap.fadeOut(1000);
+                    $body.css({ 'overflow-y': 'scroll' });
                 }
             }
         });

@@ -10,7 +10,9 @@ var scrollPages = {
             return;
         }
 
-        $body.css({ 'overflow': 'hidden' });
+        if(!$body.hasClass('hide-section')){
+            $body.css({ 'overflow': 'hidden' });
+        }
 
         var lastScrollTop = 0;
         $(window).scroll(function (event) {
