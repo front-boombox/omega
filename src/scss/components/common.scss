@@ -10,4 +10,7 @@
 }
 .second-section{
     padding-top: 150px;
+    @include media('<tablet') {
+        padding-top: 82px;
+    }
 }

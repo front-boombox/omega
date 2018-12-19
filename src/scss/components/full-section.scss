@@ -40,6 +40,10 @@
         max-width: 370px;
         animation: main-title-out 1s forwards;
         display: none;
+        @include media('>=desktop', 'height<900px') {
+            font-size: 45px;
+            margin-top: 125px;
+        }
         @include media('<=desktop') {
             font-size: 45px;
             margin-top: 180px;
@@ -112,6 +116,10 @@
         padding: 0;
         margin-bottom: -10px;
         opacity: 0.73;
+        @include media('<desktop') {
+            font-size: 25px;
+            margin-bottom: -15px;
+        }
         &.muted{
             @extend .icon-volume-off;
         }
@@ -138,7 +146,37 @@
     position: absolute;
     bottom: 0;
     left: 15px;
+    z-index: 1;
     cursor: pointer;
+    @include media('<1310px') {
+        @include animate(opacity, 1s);
+        width: 45px;
+        height: 45px;
+        position: fixed;
+        top: 95px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 4;
+    }
+    @include media('<tablet') {
+        font-size: 25px;
+        width: 25px;
+        height: 25px;
+        top: 50px;
+    }
+    .hide-section &{
+        @include media('<1310px') {
+            pointer-events: auto;
+            opacity: 1;
+            visibility: visible;
+            background: $white;
+            width: 100%;
+            text-align: center;
+        }
+    }
     .label{
         font-size: 25px;
         transform: rotate(270deg);
@@ -148,10 +186,16 @@
         left: -35px;
         letter-spacing: 2.3px;
         white-space: nowrap;
+        @include media('<1310px') {
+            display: none;
+        }
     }
     .ico{
         position: absolute;
         bottom: 155px;
         left: -14px;
+        @include media('<1310px') {
+            position: static;
+        }
     }
 }

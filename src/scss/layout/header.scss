@@ -1,5 +1,5 @@
 .header{
-    @include animate(background);
+    @include animate(background, 1s);
     position: fixed;
     top: 0;
     left: 0;
@@ -10,6 +10,9 @@
     background: transparent;
     animation: header-init 1s forwards;
     animation-fill-mode: both;
+    @include media('<=desktop') {
+        padding-right: 0;
+    }
     @include media('<desktop') {
         padding: 15px 0 6px;
         height: auto;
@@ -32,6 +35,21 @@
         .logo{
             .ico{
                 color: $blue;
+            }
+        }
+    }
+    .hide-section.menu-active &{
+        background: $blue;
+        .login-link{
+            color: $white;
+            &:hover{
+                color: $white;
+                border-color: $white;
+            }
+        }
+        .logo{
+            .ico{
+                color: $white;
             }
         }
     }
@@ -109,6 +127,7 @@
     .burger-btn{
         display: none;
         @include media('<desktop') {
+            @include animate(color);
             display: block;
             background: none;
             border: none;
@@ -123,6 +142,16 @@
                     transform: scale(-1, 1);
                     display: inline-block;
                 }
+            }
+        }
+        .hide-section &{
+            @include media('<desktop') {
+                color: $blue;
+            }
+        }
+        .hide-section.menu-active &{
+            @include media('<desktop') {
+                color: $white;
             }
         }
     }

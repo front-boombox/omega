@@ -51,6 +51,11 @@
                     color: $blue;
                     border-color: $blue;
                 }
+                .hide-section.menu-active &{
+                    @include media('<desktop') {
+                        color: $white;
+                    }
+                }
                 .span{
                     @include media('<desktop') {
                         border-color: $white;
@@ -80,6 +85,11 @@
         }
         .hide-section &{
             color: map-get($base, 'base-text-color');
+        }
+        .hide-section.menu-active &{
+            @include media('<desktop') {
+                color: $white;
+            }
         }
         .span{
             @include media('<desktop') {

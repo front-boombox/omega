@@ -1,12 +1,27 @@
 .info-line{
     background: #f2f4f7;
     margin-bottom: 90px;
+    @include media('<=desktop') {
+        background: none;
+    }
+    @include media('<tablet') {
+        margin-bottom: 18px;
+      }
     .info-list{
         @extend %listreset;
         display: flex;
+        @include media('<=desktop') {
+            flex-wrap: wrap;
+            margin: 0 -7px;
+        }
     }
     li{
         width: 25%;
+        @include media('<=desktop') {
+            width: 50%;
+            text-align: center;
+            margin-bottom: 37px;
+        }
     }
     a{
         width: calc(100% - 140px);
@@ -15,6 +30,15 @@
         display: inline-block;
         text-decoration: none;
         position: relative;
+        @include media('<1500px') {
+            margin: 0 30px;
+            width: calc(100% - 60px);
+        }
+        @include media('<=desktop') {
+            margin: 0 7px;
+            padding: 6px 15px 5px;
+            width: calc(100% - 14px);
+        }
         &:before{
             @include animate(opacity visibility);
             content: '';
@@ -34,14 +58,44 @@
             &:before{
                 opacity: 1;
                 visibility: visible;
+                @include media('<=desktop') {
+                    opacity: 0;
+                    visibility: hidden;
+                }
             }
             .label{
                 color: $blue;
+                @include media('<=desktop') {
+                    color: map-get($base, 'base-text-color');
+                }
+            }
+        }
+        &:focus{
+            outline: none;
+            &:before{
+                @include media('<=desktop') {
+                    opacity: 1;
+                    visibility: visible;
+                    background: $blue;
+                }
+            }
+            .label{
+                @include media('<=desktop') {
+                    color: $white;
+                }
+            }
+            .ico{
+                @include media('<=desktop') {
+                    color: $white;
+                }
             }
         }
         .inner{
             display: flex;
             justify-content: center;
+            @include media('<=desktop') {
+                display: block;
+            }
         }
     }
     .ico{
@@ -51,6 +105,13 @@
         z-index: 2;
         width: 70px;
         flex: 0 0 auto;
+        @include media('<widescreen') {
+            width: 40px;
+            font-size: 35px;
+        }
+        @include media('<=desktop') {
+            font-size: 25px;
+        }
     }
     .label{
         @include animate(color);
@@ -62,5 +123,15 @@
         z-index: 2;
         max-width: 130px;
         flex: 0 0 auto;
+        @include media('<widescreen') {
+            font-size: 20px;
+            max-width: 105px;
+        }
+        @include media('<=desktop') {
+            font-size: 18px;
+            display: block;
+            max-width: none;
+            margin-top: 3px;
+        }
     }
 }
