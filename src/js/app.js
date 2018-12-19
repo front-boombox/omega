@@ -6,6 +6,7 @@
 import scrollPages from './modules/scroll-pages';
 import muteVideo from './modules/mute-video';
 import removeScroll from './modules/remove-scroll';
+import burger from './modules/burger';
 
 ( ($) => {
   'use strict';
@@ -15,6 +16,7 @@ import removeScroll from './modules/remove-scroll';
     scrollPages.scrollPagesInit();
     muteVideo.muteVideoInit();
     removeScroll.removeScrollInit();
+    burger.burgerInit();
   });
 
 })(jQuery);

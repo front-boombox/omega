@@ -35,12 +35,14 @@ var scrollPages = {
             var $fullSectionWrap = $('.full-section');
             $body.removeClass('hide-section');
             $fullSectionWrap.fadeIn(1000);
+            $body.css({ 'overflow': 'hidden' });
         });
 
         $scrollDownBtn.on('click', function () {
             var $fullSectionWrap = $('.full-section');
             $body.addClass('hide-section');
             $fullSectionWrap.fadeOut(1000);
+            $body.css({ 'overflow-y': 'scroll' });
         });
     }
 

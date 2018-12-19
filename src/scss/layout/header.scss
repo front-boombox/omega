@@ -10,6 +10,15 @@
     background: transparent;
     animation: header-init 1s forwards;
     animation-fill-mode: both;
+    @include media('<desktop') {
+        padding: 15px 0 6px;
+        height: auto;
+    }
+    .menu-active &{
+        @include media('<desktop') {
+            background: $blue;
+        }
+    }
     .hide-section &{
         background: $white;
         padding-right: 0;
@@ -39,6 +48,15 @@
             @include animate(color);
             font-size: 85px;
             color: $white;
+            @include media('<desktop') {
+                font-size: 25px;
+            }
+            &:before{
+                @include media('<desktop') {
+                    content: "\e910";
+                }
+            }
+            
         }
     }
     .container{
@@ -58,6 +76,21 @@
         padding: 0 0 5px 55px;
         margin-bottom: -8px;
         border-bottom: 2px solid transparent;
+        @include media('<desktop') {
+            display: none;
+        }
+        &.mobile{
+            display: none;
+            @include media('<desktop') {
+                display: inline-block;
+                border: 2px solid $white;
+                border-radius: 8px;
+                min-width: 200px;
+                text-align: left;
+                padding: 10px 0 10px 70px;
+                margin-bottom: 65px;
+            }
+        }
         &:hover{
             border-color: $white;
         }
@@ -66,6 +99,31 @@
             position: absolute;
             top: -4px;
             left: 0;
+            @include media('<desktop') {
+                font-size: 23px;
+                top: 17px;
+                left: 29px;
+            }
+        }
+    }
+    .burger-btn{
+        display: none;
+        @include media('<desktop') {
+            display: block;
+            background: none;
+            border: none;
+            color: $white;
+            margin: 0 -8px 0 0;
+            transform: translateY(-5px);
+        }
+        &:before{
+            .menu-active &{
+                @include media('<desktop') {
+                    content: '\e911';
+                    transform: scale(-1, 1);
+                    display: inline-block;
+                }
+            }
         }
     }
 }

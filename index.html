@@ -10,7 +10,7 @@
 	<link media="all" rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
-<body>
+<body class="home-page">
 	<div id="wrapper">
 		<header class="header">
 			<div class="container">
@@ -19,24 +19,30 @@
 						<span class="ico icon-logo"><span class="sr-only">Omega</span></span>
 					</a>
 				</div>
+				<button type="button" class="burger-btn icon-menu"><span class="sr-only">Menu</span></button>
 				<nav class="menu">
 					<ul>
-						<li class="active"><a href="#">О нас</a></li>
-						<li><a href="#">Наши сервисы</a></li>
-						<li><a href="#">Ассортимент</a></li>
-						<li><a href="#">Логистика</a></li>
-						<li><a href="#">Новости</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li class="active"><a href="#"><span class="span">О нас</span></a></li>
+						<li><a href="#"><span class="span">Наши сервисы</span></a></li>
+						<li><a href="#"><span class="span">Ассортимент</span></a></li>
+						<li><a href="#"><span class="span">Логистика</span></a></li>
+						<li><a href="#"><span class="span">Новости</span></a></li>
+						<li><a href="#"><span class="span">Контакты</span></a></li>
+					</ul>
+					<a href="#" class="login-link mobile"><span class="ico icon-account-star"></span>Вход для <br>партнеров</a>
+					<ul class="social mobile">
+						<li><a href="#"><span class="icon-youtube"></span></a></li>
+						<li><a href="#"><span class="icon-facebook"></span></a></li>
 					</ul>
 				</nav>
 				<a href="#" class="login-link"><span class="ico icon-account-star"></span>Вход для <br>партнеров</a>
 			</div>
 		</header>
-		<section class="full-section first selected" style="background-image: url(assets/images/main-img.jpg)">
-			<video class="video-bg" muted="true" poster="assets/images/main-img.jpg" autoplay loop playsinline>
+		<section class="full-section first selected no-video" style="background-image: url(assets/images/main-img.jpg)">
+			<!-- <video class="video-bg" muted="true" poster="assets/images/main-img.jpg" autoplay loop playsinline>
 				<source src="assets/media/main-video.mp4" type="video/mp4">
 				Your browser does not support HTML5 video.
-			</video>
+			</video> -->
 			<div class="container">
 				<h1 class="main-title">Крупнейший игрок на рынке Украины</h1>
 			</div>
@@ -54,7 +60,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="second-section">
+		<!-- <section class="second-section">
 			<div class="text-video-block">
 				<div class="container">
 					<div class="text-holder">
@@ -152,8 +158,8 @@
 					</figure>
 				</div>
 			</div>
-		</section>
-		<footer class="footer">
+		</section> -->
+		<!-- <footer class="footer">
 			<div class="container">
 				<div class="item logo-item">
 					<div class="logo-footer">
@@ -193,7 +199,7 @@
 					</ul>
 				</div>
 			</div>
-		</footer>
+		</footer> -->
 	</div>
 	<script src="assets/js/vendor.min.js" defer></script>
 	<script src="assets/js/app.js" defer></script>

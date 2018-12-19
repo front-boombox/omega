@@ -21,6 +21,7 @@ textarea {
   border: 1px solid map-get($forms, 'form-element-border-color');
   padding: map-get($forms, 'form-element-padding');
   font-family: map-get($forms, 'form-font-family');
+  outline: none;
 
   &:focus {
     border-color: map-get($forms, 'form-element-focus-border-color');
@@ -49,4 +50,5 @@ input[type='submit'] {
   -webkit-border-radius: 0;
   cursor: pointer;
   font-family: map-get($forms, 'form-font-family');
+  outline: none;
 }
