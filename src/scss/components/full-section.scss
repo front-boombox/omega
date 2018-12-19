@@ -177,6 +177,12 @@
             text-align: center;
         }
     }
+    .hide-section.menu-active &{
+        @include media('<1310px') {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
     .label{
         font-size: 25px;
         transform: rotate(270deg);
