@@ -25,7 +25,7 @@
 }
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.woff?oiu3aw') format('woff');
+  src: url('../fonts/icomoon.woff?cgjfga') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,6 +39,12 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-chevron-left:before {
+  content: "\e912";
+}
+.icon-chevron-right:before {
+  content: "\e913";
 }
 .icon-menu-open:before {
   content: "\e911";
