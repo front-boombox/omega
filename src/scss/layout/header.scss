@@ -59,6 +59,10 @@
         animation-fill-mode: both;
     }
     &.white-header{
+        height: 140px;
+        @include media('<desktop') {
+            height: auto;
+        }
         .menu-active &{
             .burger-btn{
                 @include media('<desktop') {
