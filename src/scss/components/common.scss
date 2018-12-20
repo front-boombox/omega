@@ -1,3 +1,21 @@
+body{
+    &:not(.home-page){
+        display: flex;
+	    flex-direction: column;
+        #wrapper{
+            padding-top: 110px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            @include media('<desktop') {
+                padding-top: 51px;
+            }
+        }
+        .main{
+            flex: 1 0 auto;
+        }
+    }
+}
 .container{
     max-width: 1635px;
     margin: 0 auto;

@@ -22,7 +22,8 @@
             background: $blue;
         }
     }
-    .hide-section &{
+    .hide-section &,
+    &.white-header{
         background: $white;
         padding-right: 0;
         .login-link{
@@ -56,6 +57,33 @@
     .selected &{
         animation: header-init 1s forwards;
         animation-fill-mode: both;
+    }
+    &.white-header{
+        .menu-active &{
+            .burger-btn{
+                @include media('<desktop') {
+                    color: $white;
+                }
+            }
+            background: $blue;
+            .login-link{
+                color: $white;
+                &:hover{
+                    color: $white;
+                    border-color: $white;
+                }
+            }
+            .logo{
+                .ico{
+                    color: $white;
+                }
+            }
+        }
+        .burger-btn{
+            @include media('<desktop') {
+                color: $blue;
+            }
+        }
     }
     .logo{
         flex: 0 0 auto;

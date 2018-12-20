@@ -47,11 +47,13 @@
         &.active{
             a{
                 border-color: $white;
-                .hide-section &{
+                .hide-section &,
+                .white-header &{
                     color: $blue;
                     border-color: $blue;
                 }
-                .hide-section.menu-active &{
+                .hide-section.menu-active &,
+                .menu-active .white-header &{
                     @include media('<desktop') {
                         color: $white;
                     }
@@ -78,15 +80,18 @@
         }
         &:hover{
             border-color: $white;
-            .hide-section &{
+            .hide-section &,
+            .white-header &{
                 color: $blue;
                 border-color: $blue;
             }
         }
-        .hide-section &{
+        .hide-section &,
+        .white-header &{
             color: map-get($base, 'base-text-color');
         }
-        .hide-section.menu-active &{
+        .hide-section.menu-active &,
+        .menu-active .white-header &{
             @include media('<desktop') {
                 color: $white;
             }
