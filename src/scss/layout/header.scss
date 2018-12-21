@@ -59,9 +59,17 @@
         animation-fill-mode: both;
     }
     &.white-header{
+        @include animate(transform background, 0.5s);
         height: 140px;
+        animation: none;
         @include media('<desktop') {
             height: auto;
+        }
+        &.is-hidden{
+            transform: translateY(-100%);
+            .menu-active &{
+                transform: translateY(0);
+            }
         }
         .menu-active &{
             .burger-btn{

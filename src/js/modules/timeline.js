@@ -8,7 +8,7 @@ var timelineSlider = {
 
         $('.timeline-nav').slick({
             slidesToShow: 9,
-            slidesToScroll: 1,
+            slidesToScroll: 9,
             asNavFor: '.timeline-slider',
             centerMode: false,
             focusOnSelect: true,
@@ -40,6 +40,7 @@ var timelineSlider = {
             arrows: false,
             asNavFor: '.timeline-nav',     
             centerMode: true,     
+            centerPadding: '0px',
             cssEase: 'ease',
             edgeFriction: 0.5,
             mobileFirst: true,

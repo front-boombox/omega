@@ -69,7 +69,7 @@
           content: '';
           position: absolute;
           top: 45px;
-          left: 0;
+          left: 4%;
           width: 100%;
           height: 2px;
           background: $blue;
@@ -80,14 +80,7 @@
     &-wrapper{
       position: relative;
       width: 100%;
-      height: 580px;
-      margin: 60px auto;
-          
-          @media (max-width: 500px){
-              height: 1000px;
-              max-height: 900px;
-          }
-      
+      margin: 85px auto 12px;
     }
     &-slider{
       height: 100%;    
@@ -101,23 +94,11 @@
     &-slide{    
       position: relative;
       overflow: hidden;
-      background-repeat: no-repeat;
       outline: none;
-      background-size: auto 400px, cover;
-      background-position: top;
-      margin: 0 24px;
-      width: 80%;
+      width: 100%;
       z-index: 1;
       
       &__content{
-        z-index: 5;
-        position: absolute;
-        top: 220px;
-        background: #ffffff;
-        width: 80%;
-        left: 50%;      
-        transform: translate(-50%, 0px);
-        padding: 40px;
         opacity: 0;
         transition: opacity 1s;
         @media (max-width: 500px){
@@ -144,14 +125,24 @@
     padding: 0;
     position: relative;
     margin: 0 65px;
+    @include media('<tablet') {
+      margin: 0 10px;
+    }
     &:before{
       font: 50px 'icomoon';
       position: absolute;
       top: -12px;
+      @include media('<tablet') {
+        font-size: 25px;
+        top: 0;
+      }
     }
     &.slick-prev{
       @extend .icon-chevron-left;
       padding: 0 0 0 50px;
+      @include media('<tablet') {
+        padding-left: 25px;
+      }
       &:before{
         left: 0;
       }
@@ -159,6 +150,9 @@
     &.slick-next{
       @extend .icon-chevron-right;
       padding: 0 50px 0 0;
+      @include media('<tablet') {
+        padding-right: 25px;
+      }
       &:before{
         right: 0;
       }

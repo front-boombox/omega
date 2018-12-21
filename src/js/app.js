@@ -8,6 +8,7 @@ import muteVideo from './modules/mute-video';
 import removeScroll from './modules/remove-scroll';
 import burger from './modules/burger';
 import timelineSlider from './modules/timeline';
+import headerFixed from './modules/header-fixed';
 
 ( ($) => {
   'use strict';
@@ -19,6 +20,7 @@ import timelineSlider from './modules/timeline';
     removeScroll.removeScrollInit();
     burger.burgerInit();
     timelineSlider.timelineSliderInit();
+    headerFixed.headerFixedInit();
   });
 
 })(jQuery);
