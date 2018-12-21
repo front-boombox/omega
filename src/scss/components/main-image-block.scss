@@ -7,11 +7,24 @@
     @include media('<tablet') {
         margin-bottom: 15px;
     }
+    &.image-right{
+        .img-holder{
+            background-size: contain;
+            background-position: 100% 50%;
+        }
+        .overlay{
+            background: linear-gradient(to right, rgba(0,37,102,1) 0%,rgba(0,37,102,1) 30%,rgba(0,37,102,0) 50%,rgba(0,37,102,0) 100%);
+        }
+        .title{
+            font-size: 60px;
+        }
+    }
     .img-holder{
         position: relative;
         height: 555px;
         background-position: 50% 50%;
         background-size: cover;
+        background-repeat: no-repeat;
         border-radius: 8px;
         overflow: hidden;
         @include media('<tablet') {

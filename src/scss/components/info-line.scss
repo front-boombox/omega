@@ -130,8 +130,8 @@
         @include media('<=desktop') {
             font-size: 18px;
             display: block;
-            max-width: none;
-            margin-top: 3px;
+            max-width: 125px;
+            margin: 3px auto 0;
         }
     }
 }
