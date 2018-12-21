@@ -8,20 +8,20 @@ var timelineSlider = {
 
         $('.timeline-nav').slick({
             slidesToShow: 9,
-            slidesToScroll: 9,
+            slidesToScroll: 1,
             asNavFor: '.timeline-slider',
             centerMode: false,
             focusOnSelect: true,
             mobileFirst: true,
-            arrows: true,
+            arrows: false,
             infinite:false,
-            prevArrow: $('.slick-prev'),
-            nextArrow: $('.slick-next'),
+            // prevArrow: $('.slick-prev'),
+            // nextArrow: $('.slick-next'),
             responsive: [
                  {
                 breakpoint: 768,
                 settings: {
-                  slidesToShow: 8,
+                  slidesToShow: 9,
                  }
                 },
                {
@@ -37,9 +37,12 @@ var timelineSlider = {
          $('.timeline-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
+            arrows: true,
+            prevArrow: $('.slick-prev'),
+            nextArrow: $('.slick-next'),
             asNavFor: '.timeline-nav',     
             centerMode: true,     
+            infinite:false,
             centerPadding: '0px',
             cssEase: 'ease',
             edgeFriction: 0.5,
