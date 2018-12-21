@@ -3,7 +3,7 @@
     background: $blue;
     padding: 40px 0;
     @include media('<tablet') {
-        padding: 25px 0 10px;
+        padding: 40px 0 22px;
     }
     .container{
         display: flex;
@@ -57,40 +57,72 @@
         &.logo-item{
             width: 24%;
             @include media('<widescreen') {
-                width: 33.33%;
+                width: 40%;
                 order: 1;
             }
             @include media('<tablet') {
                 width: 100%;
+                order: 4;
+                flex-wrap: wrap;
+                margin-bottom: 29px;
+            }
+            .logo-footer{
+                @include media('<tablet') {
+                    width: 100%;
+                    margin: 0 0 13px;
+                }
+            }
+            .text-footer{
+                @include media('<tablet') {
+                    text-align: left;
+                }
             }
         }
         &.participant-item{
             width: 27%;
             @include media('<widescreen') {
-                width: 33.33%;
+                width: 40%;
                 order: 2;
             }
             @include media('<tablet') {
                 width: 100%;
+                order: 1;
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+            }
+            .logo-footer{
+                @include media('<tablet') {
+                    width: 100%;
+                    margin: 0 0 23px;
+                }
+            }
+            .text-footer{
+                @include media('<tablet') {
+                    margin: 0 0 9px;
+                }
             }
         }
         &.email-item{
             width: 18%;
             @include media('<widescreen') {
-                width: 33.33%;
+                width: 40%;
                 order: 4;
             }
             @include media('<tablet') {
                 width: 100%;
+                order: 3;
+                margin-bottom: 35px;
             }
         }
         &.tel-item{
             @include media('<widescreen') {
-                width: 33.33%;
+                width: 40%;
                 order: 5;
             }
             @include media('<tablet') {
                 width: 100%;
+                order: 2;
+                margin-bottom: 22px;
             }
         }
         &.social-item{
@@ -100,7 +132,7 @@
             }
             @include media('<tablet') {
                 width: 100%;
-                order: 6;
+                order: 5;
             }
         }
         .icon-logo-mobile{
@@ -112,6 +144,9 @@
             letter-spacing: normal;
             display: block;
             margin-bottom: 4px;
+            @include media('<tablet') {
+                margin-bottom: 3px;
+            }
         }
         .text-footer{
             display: flex;
