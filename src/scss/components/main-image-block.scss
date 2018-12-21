@@ -1,6 +1,10 @@
 .main-image-block{
     padding: 50px 40px 0;
     margin-bottom: 58px;
+    @include media('<tablet') {
+        padding: 15px 15px 0;
+        margin-bottom: 15px;
+    }
     .img-holder{
         position: relative;
     }

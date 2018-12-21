@@ -5,6 +5,10 @@
     overflow: hidden;
     padding-top: 30px;
     text-align: center;
+    @include media('<tablet') {
+        font-size: 18px;
+        padding-top: 0;
+    }
     ul{
         @extend %listreset;
         display: flex;
@@ -12,20 +16,33 @@
         max-width: 1245px;
         margin: 0 auto;
         padding: 0 15px;
+        @include media('<tablet') {
+            overflow-x: auto;
+            padding: 0;
+        }
     }
     li{
         width: 22.5%;
+        @include media('<tablet') {
+            min-width: 125px;
+        }
         &.active{
             a{
                 color: $blue;
                 background: $white;
                 box-shadow: 0px 13px 33px 0 rgba(5, 75, 197, 0.33);
                 border-radius: 8px 8px 0 0;
+                @include media('<tablet') {
+                    border-radius: 0;
+                    box-shadow: none;
+                    border-bottom: 4px solid $blue;
+                    background: none;
+                }
             }
         }
     }
     a{
-        @include animate(color background box-shadow);
+        @include animate(color background box-shadow border);
         color: map-get($base, 'base-text-color');
         height: 100%;
         display: flex;
@@ -34,6 +51,10 @@
         box-shadow: 0px 13px 33px 0 rgba(5, 75, 197, 0);
         text-decoration: none;
         padding: 26px 15px;
+        @include media('<tablet') {
+            padding: 15px;
+            box-shadow: none;
+        }
         &:hover{
             color: $blue;
         }
