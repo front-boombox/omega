@@ -9,6 +9,8 @@ import removeScroll from './modules/remove-scroll';
 import burger from './modules/burger';
 import timelineSlider from './modules/timeline';
 import headerFixed from './modules/header-fixed';
+import spareFancy from './modules/spare-fancy';
+import customScroll from './modules/custom-scroll';
 
 ( ($) => {
   'use strict';
@@ -21,6 +23,8 @@ import headerFixed from './modules/header-fixed';
     burger.burgerInit();
     timelineSlider.timelineSliderInit();
     headerFixed.headerFixedInit();
+    spareFancy.spareFancyInit();
+    customScroll.customScrollInit();
   });
 
 })(jQuery);

@@ -1,0 +1,73 @@
+.modal-content-holder{
+    display: flex;
+    margin: 0 0 60px;
+    @include media('<tablet') {
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+    .img-holder{
+        padding: 0 40px 0 0;
+        @include media('<tablet') {
+            padding: 0;
+            width: 100%;
+        }
+        .img-wrap{
+            width: 235px;
+            height: 235px;
+            box-shadow: 5px 10px 85px -20px rgba(#0955d9, 0.5);
+            border-radius: 8px;
+            background: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0 52px;
+            @include media('<desktop') {
+                width: 200px;
+                height: 200px;
+            }
+            @include media('<tablet') {
+                width: 100%;
+                height: 150px;
+                margin-bottom: 20px;
+            }
+        }
+        img{
+            border-radius: 8px;
+        }
+        .modal-site-link{
+            font: 18px/1.33 map-get($base, 'base-font-family');
+            letter-spacing: normal;
+            @include media('<tablet') {
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+        }
+    }
+    .text-holder{
+        font: 18px/1.35 map-get($base, 'base-font-family');
+        color: #394148;
+        letter-spacing: normal;
+        text-align: justify;
+        max-height: 435px;
+        @include media('<tablet') {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-right: -15px;
+        }
+        p {
+            margin: 0 0 24px;
+        }
+    }
+}
+.modal-title{
+    font: 30px/1 map-get($base, 'bold-font-family');
+    color: $blue;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 0 45px;
+    letter-spacing: normal;
+    @include media('<tablet') {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}

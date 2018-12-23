@@ -1,0 +1,46 @@
+.mCSB_scrollTools{
+	right: 0;
+	opacity: 1;
+	.mCSB_dragger{
+		&:hover{
+			.mCSB_dragger_bar{
+				background-color: $blue;
+			}
+		}
+		&:active, &.mCSB_dragger_onDrag{
+			.mCSB_dragger_bar{
+				background-color: $blue;
+			}
+		}
+		.mCSB_dragger_bar{
+			width: 16px;
+			border-radius: 8px;
+            background-color: $blue;
+            @include media('<tablet') {
+                width: 3px;
+            }
+		}
+	}
+	.mCSB_draggerRail{
+		background-color: $white;
+		border-radius: 0;
+    }
+}
+.custom-scrollbar, .custom-scrollbar-form{
+	height: 100%;
+}
+.mCSB_container{
+	&.mCS_no_scrollbar_y{
+		&.mCS_y_hidden{
+			margin-left: 0;
+		}
+	}
+}
+.mCSB_inside{
+    > .mCSB_container{
+        margin-right: 45px !important;
+        @include media('<tablet') {
+            margin-right: 15px !important;
+        }
+    }
+}
