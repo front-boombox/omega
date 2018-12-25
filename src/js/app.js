@@ -11,6 +11,7 @@ import timelineSlider from './modules/timeline';
 import headerFixed from './modules/header-fixed';
 import spareFancy from './modules/spare-fancy';
 import customScroll from './modules/custom-scroll';
+import countAnimate from './modules/count-animate';
 
 ( ($) => {
   'use strict';
@@ -25,6 +26,7 @@ import customScroll from './modules/custom-scroll';
     headerFixed.headerFixedInit();
     spareFancy.spareFancyInit();
     customScroll.customScrollInit();
+    countAnimate.countAnimateInit();
   });
 
 })(jQuery);
