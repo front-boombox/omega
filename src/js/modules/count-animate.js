@@ -8,7 +8,8 @@ var countAnimate = {
 
         $(window).on("load",function(){
             $spincrementWrap.spincrement({
-                thousandSeparator: ' '
+                thousandSeparator: ' ',
+                duration: 2000
             });
         });
     }

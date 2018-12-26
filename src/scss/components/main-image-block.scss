@@ -32,6 +32,15 @@
             }
         }
     }
+    &.with-titles{
+        margin-bottom: 79px;
+        @include media('<tablet') {
+            margin-bottom: 15px;
+        }
+        .overlay{
+            background: linear-gradient(to bottom, rgba(30, 87, 153, 0.2) 0%, rgba(0, 37, 102, 0.5) 50%, rgba(0, 37, 102, 0.73) 100%);
+        }
+    }
     .img-holder{
         position: relative;
         height: 555px;
@@ -65,6 +74,63 @@
             font-size: 20px;
             left: 15px;
             bottom: 10px;
+        }
+    }
+    .second-titles{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1555px;
+        margin: 0 auto;
+        padding: 90px 15px 0;
+        @include media('<widescreen') {
+            padding-top: 30px;
+        }
+        @include media('<tablet') {
+            padding-top: 10px;
+            display: block;
+        }
+        h2{
+            font: 60px/1.25 map-get($base, 'secondary-font-family');
+            color: $white;
+            text-transform: uppercase;
+            width: 49%;
+            @include media('<widescreen') {
+                font-size: 35px;
+            }
+            @include media('<tablet') {
+                font-size: 20px;
+                width: 100%;
+            }
+            &:first-of-type{
+                .spincrement{
+                    min-width: 160px;
+                    @include media('<widescreen') {
+                        min-width: 95px;
+                    }
+                    @include media('<tablet') {
+                        min-width: 55px;
+                    }
+                }
+            }
+            &:last-of-type{
+                .spincrement{
+                    min-width: 280px;
+                    @include media('<widescreen') {
+                        min-width: 165px;
+                    }
+                    @include media('<tablet') {
+                        min-width: 95px;
+                    }
+                }
+            }
+            .span{
+                font-family: map-get($base, 'secondary-light-font-family');
+                text-transform: none;
+                display: block;
+            }
+            .spincrement{
+                display: inline-block;
+            }
         }
     }
     img{

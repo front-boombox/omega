@@ -1,0 +1,96 @@
+.small-image-block{
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    @include media('<widescreen') {
+        padding: 0 15px;
+    }
+    @include media('<=tablet') {
+        display: block;
+    }
+    @include media('<tablet') {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .image-holder{
+        width: 32%;
+        padding-top: 35px;
+        @include media('<widescreen') {
+            width: 34%;
+        }
+        @include media('<=tablet') {
+            width: 100%;
+            margin-bottom: 15px;
+            padding-top: 0;
+        }
+        .more-link{
+            @extend .icon-arrow-right;
+            font: 24px/1.25 map-get($base, 'regular-font-family');
+            letter-spacing: normal;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            padding-right: 60px;
+            margin: 0 0 39px 40px;
+            @include media('<widescreen') {
+                margin-left: 0;
+            }
+            @include media('<desktop') {
+                font-size: 20px;
+                padding-right: 32px;
+            }
+            @include media('<tablet') {
+                font: 16px/1.25 map-get($base, 'bold-font-family');
+                margin-bottom: 15px;
+            }
+            &:before{
+                @include animate(transform);
+                font: 25px 'icomoon';
+                position: absolute;
+                top: 5px;
+                right: 26px;
+                @include media('<desktop') {
+                    top: 0;
+                    right: -2px;
+                }
+                @include media('<tablet') {
+                    top: -2px;
+                }
+            }
+            &:hover{
+                &:before{
+                    transform: translateX(10px);
+                }
+            }
+        }
+        img{
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+    .text-holder{
+        width: 64%;
+        padding-right: 40px;
+        text-align: justify;
+        @include media('<widescreen') {
+            padding-right: 0;
+        }
+        @include media('<=tablet') {
+            width: 100%;
+        }
+        h2{
+            font: 60px/1.25 map-get($base, 'regular-font-family');
+            color: $blue;
+            margin: 0 0 19px;
+            @include media('<tablet') {
+                font-size: 40px;
+            }
+        }
+        p{
+            margin: 0 0 30px;
+            @include media('<tablet') {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

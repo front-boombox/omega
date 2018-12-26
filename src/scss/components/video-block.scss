@@ -1,0 +1,74 @@
+.video-block{
+    padding: 0 40px;
+    margin: 0 0 83px;
+    display: flex;
+    justify-content: space-between;
+    @include media('<widescreen') {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    @include media('<=tablet') {
+        display: block;
+    }
+    @include media('<tablet') {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .text-holder{
+        width: 47%;
+        padding-left: 40px;
+        text-align: justify;
+        @include media('<widescreen') {
+            width: 55%;
+            padding-left: 0;
+        }
+        @include media('<=tablet') {
+            width: 100%;
+        }
+        p{
+            margin: 0 0 30px;
+            @include media('<tablet') {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .video-holder{
+        width: 49%;
+        @include media('<widescreen') {
+            width: 43%;
+        }
+        @include media('<=tablet') {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .thumb-video{
+            border-radius: 8px;
+            width: 100%;
+        }
+        a{
+            @include animate(opacity);
+            @extend .icon-play-circle-outline;
+            cursor: pointer;
+            display: block;
+            position: relative;
+            &:hover{
+                opacity: 0.73;
+            }
+            &:before{
+                opacity: 0.73;
+                color: $white;
+                font: 45px 'icomoon';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 8px;
+                background: rgba($blue, 0.99);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
