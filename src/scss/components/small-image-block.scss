@@ -1,9 +1,13 @@
 .small-image-block{
     padding: 0 40px;
+    margin: 0 0 89px;
     display: flex;
     justify-content: space-between;
     @include media('<widescreen') {
         padding: 0 15px;
+    }
+    @include media('<desktop') {
+        margin-bottom: 30px;
     }
     @include media('<=tablet') {
         display: block;

@@ -1,0 +1,80 @@
+.vacancies-block{
+    padding: 0 40px;
+    @include media('<widescreen') {
+        padding: 0 15px;
+    }
+    .items-holder{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+        @include media('<1300px') {
+            margin: 0 -10px;
+        }
+        @include media('<widescreen') {
+            margin: 0 -5px;
+        }
+        @include media('<tablet') {
+            margin: 0;
+        }
+    }
+    .item-wrap{
+        width: 33.33%;
+        padding: 0 20px;
+        margin-bottom: 40px;
+        @include media('<1300px') {
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+        @include media('<widescreen') {
+            padding: 0 5px;
+            margin-bottom: 15px;
+        }
+        @include media('<tablet') {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    .link-holder{
+        text-align: right;
+    }
+    .more-link{
+        @extend .icon-arrow-right;
+        font: 24px/1.25 map-get($base, 'regular-font-family');
+        letter-spacing: normal;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        padding-right: 40px;
+        margin: 0 0 30px;
+        @include media('<widescreen') {
+            margin-left: 0;
+        }
+        @include media('<desktop') {
+            font-size: 20px;
+            padding-right: 32px;
+        }
+        @include media('<tablet') {
+            font: 16px/1.25 map-get($base, 'bold-font-family');
+            margin-bottom: 15px;
+        }
+        &:before{
+            @include animate(transform);
+            font: 25px 'icomoon';
+            position: absolute;
+            top: 7px;
+            right: 5px;
+            @include media('<desktop') {
+                top: 0;
+                right: -2px;
+            }
+            @include media('<tablet') {
+                top: -2px;
+            }
+        }
+        &:hover{
+            &:before{
+                transform: translateX(10px);
+            }
+        }
+    }
+}
