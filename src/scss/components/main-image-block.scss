@@ -1,14 +1,13 @@
 .main-image-block{
-    padding: 50px 40px 0;
+    padding: 0 40px;
     margin-bottom: 58px;
     @include media('<desktop') {
-        padding: 15px 15px 0;
+        padding: 0 15px;
     }
     @include media('<tablet') {
         margin-bottom: 15px;
     }
     &.image-right{
-        padding-top: 0;
         margin-bottom: 48px;
         @include media('<desktop') {
             margin-bottom: 15px;

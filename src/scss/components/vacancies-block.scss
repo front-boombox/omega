@@ -3,6 +3,34 @@
     @include media('<widescreen') {
         padding: 0 15px;
     }
+    &.two-columns{
+        .content-inner{
+            display: flex;
+            margin: 0 -20px;
+            @include media('<1300px') {
+                margin: 0 -10px;
+            }
+            @include media('<widescreen') {
+                margin: 0 -5px;
+            }
+            @include media('<tablet') {
+                flex-wrap: wrap-reverse;
+            }
+        }
+        .items-holder{
+            width: 66.66%;
+            margin: 0;
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+        .item-wrap{
+            width: 50%;
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+    }
     .items-holder{
         display: flex;
         flex-wrap: wrap;

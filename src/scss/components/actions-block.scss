@@ -1,0 +1,41 @@
+.actions-block{
+    background: $blue;
+    border-radius: 8px;
+    padding: 40px 80px;
+    @include media('<1550px') {
+        padding: 40px 15px 40px 40px;
+    }
+    @include media('<desktop') {
+        padding: 15px;
+    }
+    @include media('<tablet') {
+        margin-bottom: 30px;
+    }
+    .actions-list{
+        @extend %listreset;
+        font: 30px/1.25 map-get($base, 'regular-font-family');
+        border-left: 4px solid $white;
+        padding: 21px 0 11px 35px;
+        @include media('<desktop') {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        li{
+            margin: 0 0 35px;
+            @include media('<desktop') {
+                margin-bottom: 15px;
+            }
+            &:last-child{
+                margin-bottom: 15px;
+            }
+        }
+        .actions-modal-link{
+            @include animate(opacity);
+            color: $white;
+            text-decoration: none;
+            &:hover{
+                opacity: 0.73;
+            }
+        }
+    }
+}

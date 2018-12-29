@@ -1,0 +1,23 @@
+.filter-column{
+    width: 33.33%;
+    padding-top: 35px;
+    @include media('<tablet') {
+        width: 100%;
+        padding-top: 0;
+    }
+    .inner{
+        padding: 0 20px;
+        @include media('<1300px') {
+            padding: 0 10px;
+        }
+        @include media('<widescreen') {
+            padding: 0 5px;
+        }
+    }
+    .select-holder{
+        margin-bottom: 67px;
+        @include media('<tablet') {
+            margin-bottom: 30px;
+        }
+    }
+}

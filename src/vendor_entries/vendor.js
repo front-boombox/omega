@@ -7,5 +7,7 @@ module.exports = [
   './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
   './node_modules/slick-carousel/slick/slick.min.js',
   './node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
-  './src/js/plugins/jquery.spincrement.js'
+  './src/js/plugins/jquery.spincrement.js',
+  './node_modules/jcf/dist/js/jcf.js',
+  './node_modules/jcf/dist/js/jcf.select.js'
 ];

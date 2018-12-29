@@ -9,9 +9,10 @@ import removeScroll from './modules/remove-scroll';
 import burger from './modules/burger';
 import timelineSlider from './modules/timeline';
 import headerFixed from './modules/header-fixed';
-import spareFancy from './modules/spare-fancy';
+import fancyModal from './modules/fancy-modal';
 import customScroll from './modules/custom-scroll';
 import countAnimate from './modules/count-animate';
+import customSelect from './modules/custom-select';
 
 ( ($) => {
   'use strict';
@@ -24,9 +25,10 @@ import countAnimate from './modules/count-animate';
     burger.burgerInit();
     timelineSlider.timelineSliderInit();
     headerFixed.headerFixedInit();
-    spareFancy.spareFancyInit();
+    fancyModal.fancyModalInit();
     customScroll.customScrollInit();
     countAnimate.countAnimateInit();
+    customSelect.customSelectInit();
   });
 
 })(jQuery);
