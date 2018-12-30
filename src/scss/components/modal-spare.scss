@@ -59,12 +59,41 @@
         }
     }
 }
+.fancybox-content{
+    .select-wrap,
+    .input-wrap{
+        margin: 0 0 65px;
+        @include media('<tablet') {
+            margin-bottom: 30px;
+        }
+    }
+    .simple-btn{
+        width: 100%;
+        margin-top: 97px;
+        @include media('<tablet') {
+            margin-top: 30px;
+        }
+    }
+}
 .modal-title{
     font: 30px/1 map-get($base, 'bold-font-family');
     color: $blue;
     text-transform: uppercase;
     display: block;
     margin: 0 0 45px;
+    letter-spacing: normal;
+    @include media('<tablet') {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}
+.second-modal-title{
+    font: 30px/1 map-get($base, 'regular-font-family');
+    color: $blue;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin: 0 0 60px;
     letter-spacing: normal;
     @include media('<tablet') {
         font-size: 25px;
