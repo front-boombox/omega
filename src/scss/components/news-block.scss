@@ -1,0 +1,47 @@
+.news-block{
+    width: 42.5%;
+    padding-top: 87px;
+    .more-link-holder{
+        text-align: right;
+    }
+    .more-link{
+        @extend .icon-arrow-right;
+        font: 24px/1.25 map-get($base, 'regular-font-family');
+        letter-spacing: normal;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        padding-right: 40px;
+        margin: 0 45px 33px 0;
+        @include media('<widescreen') {
+            margin-left: 0;
+        }
+        @include media('<desktop') {
+            font-size: 20px;
+            padding-right: 32px;
+        }
+        @include media('<tablet') {
+            font: 16px/1.25 map-get($base, 'bold-font-family');
+            margin-bottom: 15px;
+        }
+        &:before{
+            @include animate(transform);
+            font: 25px 'icomoon';
+            position: absolute;
+            top: 6px;
+            right: 5px;
+            @include media('<desktop') {
+                top: 0;
+                right: -2px;
+            }
+            @include media('<tablet') {
+                top: -2px;
+            }
+        }
+        &:hover{
+            &:before{
+                transform: translateX(10px);
+            }
+        }
+    }
+}

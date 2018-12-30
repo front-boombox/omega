@@ -1,5 +1,62 @@
 .animate-block{
   margin-bottom: 38px;
+  &.vertical{
+    overflow: hidden;
+    .container-big{
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+    figure.snip0016{
+      width: 100%;
+      min-height: 320px;
+      margin-bottom: 40px;
+      background: $white;
+      border-radius: 8px 0 0 8px;
+      &:hover{
+        figcaption{
+          &:before{
+            background: transparent;
+            border-color: $blue;
+          }
+          > a{
+            &:before{
+              transform: translateX(0);
+              border-color: $blue;
+            }
+          }
+          h2, p{
+            color: $blue;
+          }
+        }
+      }
+      figcaption{
+        &:before{
+          left: 75px;
+        }
+        > a{
+          &:before{
+            @include animate(transform border-color);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: translateX(40px);
+            border: 2px solid map-get($base, 'base-text-color');
+            border-radius: 8px 0 0 8px;
+          }
+        }
+        h2, p{
+          opacity: 1;
+          color: map-get($base, 'base-text-color');
+          transform: translate3d(0%, 0%, 0);
+          max-width: 475px;
+        }
+      }
+    }
+  }
     .container-big{
         display: flex;
         justify-content: space-between;
@@ -123,6 +180,7 @@ figure.snip0016 {
   }
   figure.snip0016 h2 {
     font: 30px/1.25 map-get($base, 'base-font-family');
+    color: $white;
     text-transform: uppercase;
     -webkit-transform: translate3d(30%, 0%, 0);
     transform: translate3d(30%, 0%, 0);

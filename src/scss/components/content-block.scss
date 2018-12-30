@@ -3,6 +3,9 @@
         font-size: 16px;
         line-height: 1.5;
     }
+    .projects-page &{
+        width: 44.5%;
+    }
     .container{
         max-width: 930px;
     }
@@ -19,6 +22,9 @@
         color: $blue;
         @include media('<tablet') {
             font-size: 50px;
+        }
+        .projects-page &{
+            margin: 0 0 38px;
         }
     }
     h2{
@@ -53,8 +59,42 @@
     }
     p{
         margin: 0 0 30px;
+        text-align: justify;
         @include media('<tablet') {
             margin-bottom: 24px;
+        }
+    }
+    .link-holder{
+        text-align: center;
+        margin: 79px 0;
+        a{
+            @include animate(opacity);
+            font: 24px/1 map-get($base, 'bold-font-family');
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            border: 2px solid $blue;
+            border-radius: 8px;
+            padding: 20px 10px;
+            min-width: 430px;
+            min-height: 150px;
+            text-align: left;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                opacity: 0.73;
+            }
+            .inner{
+                position: relative;
+                padding: 0 0 0 70px;
+            }
+            .ico{
+                font-size: 47px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
     }
 }
