@@ -13,6 +13,7 @@ import fancyModal from './modules/fancy-modal';
 import customScroll from './modules/custom-scroll';
 import countAnimate from './modules/count-animate';
 import customSelect from './modules/custom-select';
+import mapHandler from './modules/map';
 
 ( ($) => {
   'use strict';
@@ -29,6 +30,7 @@ import customSelect from './modules/custom-select';
     customScroll.customScrollInit();
     countAnimate.countAnimateInit();
     customSelect.customSelectInit();
+    mapHandler.mapHandlerInit();
   });
 
 })(jQuery);

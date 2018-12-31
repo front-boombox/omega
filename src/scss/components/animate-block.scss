@@ -2,6 +2,9 @@
   margin-bottom: 38px;
   &.vertical{
     overflow: hidden;
+    @include media('<tablet') {
+      margin-bottom: 15px;
+    }
     .container-big{
       display: block;
       padding: 0;
@@ -13,6 +16,10 @@
       margin-bottom: 40px;
       background: $white;
       border-radius: 8px 0 0 8px;
+      @include media('<tablet') {
+        min-height: 254px;
+        margin-bottom: 15px;
+      }
       &:hover{
         figcaption{
           &:before{
@@ -31,8 +38,32 @@
         }
       }
       figcaption{
+        @include media('<1650px') {
+          padding: 62px 15px 62px 5em;
+        }
+        @include media('<widescreen') {
+          padding: 30px 15px 30px 3em;
+        }
+        @include media('<desktop') {
+          padding-left: 1em;
+        }
+        @include media('<tablet') {
+          position: static;
+          padding-top: 20px;
+        }
         &:before{
           left: 75px;
+          transition-delay: 0s;
+          @include media('<1550px') {
+            top: 40px;
+            bottom: 40px;
+          }
+          @include media('<widescreen') {
+            left: 35px;
+          }
+          @include media('<desktop') {
+            display: none;
+          }
         }
         > a{
           &:before{
@@ -46,6 +77,12 @@
             transform: translateX(40px);
             border: 2px solid map-get($base, 'base-text-color');
             border-radius: 8px 0 0 8px;
+            @include media('<desktop') {
+              transform: translateX(0);
+            }
+            @include media('<tablet') {
+              border-radius: 8px;
+            }
           }
         }
         h2, p{
@@ -53,6 +90,22 @@
           color: map-get($base, 'base-text-color');
           transform: translate3d(0%, 0%, 0);
           max-width: 475px;
+        }
+        h2{
+          @include media('<1550px') {
+            font-size: 30px;
+          }
+          @include media('<tablet') {
+            font-size: 25px;
+          }
+        }
+        p{
+          @include media('<1550px') {
+            font-size: 18px;
+          }
+          @include media('<tablet') {
+            font-size: 16px;
+          }
         }
       }
     }

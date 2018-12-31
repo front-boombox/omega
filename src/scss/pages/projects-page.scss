@@ -1,5 +1,14 @@
-.content-wrapper{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 80px;
+.projects-page{
+    .content-wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 80px;
+        @include media('<widescreen') {
+            padding-left: 40px;
+        }
+        @include media('<tablet') {
+            display: block;
+            padding: 0 15px;
+        }
+    }
 }

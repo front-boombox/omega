@@ -1,6 +1,15 @@
 .news-block{
     width: 42.5%;
     padding-top: 87px;
+    @include media('<widescreen') {
+        width: 50%;
+    }
+    @include media('<desktop') {
+        padding-top: 0;
+    }
+    @include media('<tablet') {
+        width: 100%;
+    }
     .more-link-holder{
         text-align: right;
     }
@@ -19,10 +28,11 @@
         @include media('<desktop') {
             font-size: 20px;
             padding-right: 32px;
+            margin: 0 15px 15px 0;
         }
         @include media('<tablet') {
             font: 16px/1.25 map-get($base, 'bold-font-family');
-            margin-bottom: 15px;
+            margin-right: 0;
         }
         &:before{
             @include animate(transform);
