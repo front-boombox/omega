@@ -31,6 +31,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'exo_2regular';
+  src: url('../fonts/exo2-regular-webfont.woff2') format('woff2'),
+       url('../fonts/exo2-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'icomoon';
   src: url('../fonts/icomoon.woff?cgjfga') format('woff');
   font-weight: normal;
