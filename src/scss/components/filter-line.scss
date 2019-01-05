@@ -1,0 +1,39 @@
+.filter-line{
+    background: #f2f4f7;
+    padding: 40px 25px;
+    margin: 0 0 40px;
+    .container-big{
+        display: flex;
+        justify-content: space-between;
+    }
+    .links{
+        display: flex;
+    }
+    .link-holder{
+        margin: 0 70px 0 0;
+        &:last-child{
+            margin: 0;
+        }
+        a{
+            @include animate(opacity);
+            font: 24px/1 map-get($base, 'bold-font-family');
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: left;
+            &:hover{
+                opacity: 0.73;
+            }
+            .inner{
+                position: relative;
+                padding: 0 0 0 60px;
+            }
+            .ico{
+                font-size: 47px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

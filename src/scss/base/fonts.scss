@@ -39,7 +39,7 @@
 }
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.woff?rryl2b') format('woff');
+  src: url('../fonts/icomoon.woff?u7xskq') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -53,6 +53,15 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-archive:before {
+  content: "\e915";
+}
+.icon-bell:before {
+  content: "\e916";
+}
+.icon-share-variant:before {
+  content: "\e917";
 }
 .icon-calendar-clock:before {
   content: "\e914";
