@@ -1,0 +1,114 @@
+.titles-services{
+    display: flex;
+    padding: 0 40px;
+    @include media('<=desktop') {
+        padding: 0 15px;
+    }
+    @include media('<tablet') {
+        display: block;
+    }
+    .item {
+        position: relative;
+        @include media('<tablet') {
+            margin-bottom: 15px;
+        }
+    }
+    .side{
+        width: 23.5%;
+        flex: 0 0 auto;
+        @include media('<tablet') {
+            width: 100%;
+        }
+    }
+    .middle{
+        padding: 0 40px;
+        flex-grow: 1;
+        @include media('<=desktop') {
+            padding: 0 15px;
+        }
+        @include media('<tablet') {
+            padding: 0;
+        }
+        .item{
+            margin: 0 0 40px;
+            @include media('<=desktop') {
+                margin-bottom: 15px;
+            }
+        }
+        a{
+            height: 280px;
+            display: block;
+            position: relative;
+            @include media('<=desktop') {
+                height: 230px;
+            }
+            @include media('<=tablet') {
+                height: 170px;
+            }
+            @include media('<tablet') {
+                height: 280px;
+            }
+        }
+    }
+    label {
+        font: 30px/1.3 map-get($base, 'secondary-font-family');
+        position: absolute;
+        left: 41px;
+        z-index: 3;
+        color: $white;
+        bottom: 29px;
+        vertical-align: middle;
+        display: inline-block;
+        letter-spacing: normal;
+        text-transform: uppercase;
+        padding-right: 20px;
+        @include media('<widescreen') {
+            font-size: 20px;
+            left: 20px;
+            bottom: 20px;
+        }
+        @include media('<=desktop') {
+            font-size: 16px;
+            left: 15px;
+            bottom: 15px;
+        }
+    }
+    a{
+        height: 920px;
+        display: block;
+        position: relative;
+        @include media('<=desktop') {
+            height: 720px;
+        }
+        @include media('<=tablet') {
+            height: 540px;
+        }
+        @include media('<tablet') {
+            height: 280px;
+        }
+        &:hover{
+            &:before{
+                opacity: 1;
+            }
+        }
+        &:before {
+            @include animate(opacity);
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            z-index: 3;
+            border-radius: 8px;
+            box-shadow: 0 0 45px 0 rgba(9,85,217,.5);
+        }
+        img{
+            border-radius: 8px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

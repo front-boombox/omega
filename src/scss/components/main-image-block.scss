@@ -55,6 +55,13 @@
             margin-bottom: 15px;
         }
     }
+    .services-page &{
+        margin-bottom: 40px;
+        @include media('<=desktop') {
+            padding: 0 15px;
+            margin-bottom: 15px;
+        }
+    }
     .img-holder{
         position: relative;
         height: 555px;
