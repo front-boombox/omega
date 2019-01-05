@@ -114,4 +114,32 @@
             }
         }
     }
+    .simple-link-holder{
+        text-align: center;
+        margin: 58px 0 68px;
+        @include media('<tablet') {
+            margin: 30px 0;
+        }
+        a{
+            @include animate(opacity);
+            font: 24px/1 map-get($base, 'bold-font-family');
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: left;
+            &:hover{
+                opacity: 0.73;
+            }
+            .inner{
+                position: relative;
+                padding: 0 0 0 70px;
+            }
+            .ico{
+                font-size: 47px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
 }

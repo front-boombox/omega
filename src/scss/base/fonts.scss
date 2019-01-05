@@ -39,7 +39,7 @@
 }
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.woff?cgjfga') format('woff');
+  src: url('../fonts/icomoon.woff?rryl2b') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -53,6 +53,9 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-calendar-clock:before {
+  content: "\e914";
 }
 .icon-chevron-left:before {
   content: "\e912";
