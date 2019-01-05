@@ -1,27 +1,42 @@
 .paginators{
     text-align: center;
+    margin: 0 0 39px;
     ul{
         @extend %listreset;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        padding: 0 0 100px;
+        padding: 0 0 59px;
+        @include media('<tablet') {
+            padding: 0 15px 59px;
+        }
     }
     li{
         margin: 0 27px;
+        @include media('<tablet') {
+            margin: 0 15px;
+        }
         &:first-child,
         &:last-child{
             position: absolute;
             bottom: 0;
+            margin: 0;
+            &.inactive{
+                a{
+                    color: #999999;
+                    pointer-events: none;
+                }
+            }
             a{
                 width: auto;
+                height: auto;
                 background: none;
                 position: relative;
                 &:before{
-                    font: 30px 'icomoon';
+                    font: 45px 'icomoon';
                     position: absolute;
-                    top: 0;
+                    top: -9px;
                 }
                 &:after{
                     content: attr(data-page);
@@ -33,9 +48,12 @@
             left: 0;
             a{
                 @extend .icon-chevron-left;
-                padding: 0 0 0 30px;
+                padding: 0 0 0 40px;
+                @include media('<tablet') {
+                    padding-left: 30px;
+                }
                 &:before{
-                    left: 0;
+                    left: -4px;
                 }
             }
         }
@@ -43,9 +61,12 @@
             right: 0;
             a{
                 @extend .icon-chevron-right;
-                padding: 0 30px 0 0;
+                padding: 0 40px 0 0;
+                @include media('<tablet') {
+                    padding-right: 30px;
+                }
                 &:before{
-                    right: 0;
+                    right: -4px;
                 }
             }
         }
@@ -60,7 +81,7 @@
         }
     }
     a{
-        @include animate(all);
+        @include animate(opacity);
         font-size: 0;
         display: flex;
         justify-content: center;
@@ -70,5 +91,8 @@
         height: 16px;
         border-radius: 50%;
         background: $blue;
+        &:hover{
+            opacity: .73;
+        }
     }
 }
