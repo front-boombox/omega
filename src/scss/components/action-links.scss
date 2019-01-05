@@ -1,0 +1,44 @@
+.action-links{
+    @extend %listreset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 85px;
+    @include media('<tablet') {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    li{
+        @include media('<tablet') {
+            margin-bottom: 15px;
+        }
+    }
+    a{
+        @include animate(color);
+        font: 24px/1.25 map-get($base, 'bold-font-family');
+        color: map-get($base, 'base-text-color');
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        padding: 0 30px 0 0;
+        &:hover{
+            color: $blue;
+            .span{
+                border-color: $blue;
+            }
+        }
+        .span{
+            @include animate(border-color);
+            border-bottom: 1px solid transparent;
+            display: inline-block;
+        }
+        .ico{
+            @include animate(border-color);
+            display: inline-block;
+            position: absolute;
+            top: 6px;
+            right: 0;
+        }
+    }
+}
