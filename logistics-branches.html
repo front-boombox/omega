@@ -22,9 +22,9 @@
 				<nav class="menu">
 					<ul>
 						<li><a href="about-us-history.html"><span class="span">О нас</span></a></li>
-						<li class="active"><a href="services.html"><span class="span">Наши сервисы</span></a></li>
+						<li><a href="services.html"><span class="span">Наши сервисы</span></a></li>
 						<li><a href="assortment.html"><span class="span">Ассортимент</span></a></li>
-						<li><a href="logistics.html"><span class="span">Логистика</span></a></li>
+						<li class="active"><a href="logistics.html"><span class="span">Логистика</span></a></li>
 						<li><a href="news-archive.html"><span class="span">Новости</span></a></li>
 						<li><a href="contact-us.html"><span class="span">Контакты</span></a></li>
 					</ul>
@@ -38,23 +38,31 @@
 			</div>
 		</header>
 		<main class="main">
-			<section class="main-image-block">
-				<div class="img-holder" style="background-image: url(assets/images/services-call-center.jpg);">
-					<div class="overlay">
-						<h1 class="title">Профессиональные консультации по подбору автокомпонентов<br>
-                            Быстрый и удобный процесс оформления заказа Callback</h1>
-					</div>
-				</div>
-			</section>
-			<section class="content-block">
-				<div class="container">
-                    <strong>Колл–центр</strong><br>
-                    <p>В нашем колл–центре с партнерами общаются 88 сотрудников. Оперативно отвечаем на вопросы, решаем проблемы и помогаем делать заказы.</p>
-                    <strong>Персональный менеджер продаж</strong><br>
-                    <p>С партнерами лично работают 157 менеджеров продаж.</p>
-                    <p>У каждого клиента — свой персональный менеджер. Поддерживаем бизнес на каждом этапе сотрудничества.</p>
-				</div>
-			</section>
+            <section class="map-block">
+                <div class="select-holder">
+                    <select class="simple-select">
+                        <option>Харьков</option>
+                        <option>Киев</option>
+                        <option>Днепр</option>
+                    </select>
+                </div>
+                <div id="map_canvas" class="map"></div>
+            </section>
+            <section class="company-details">
+                <div class="container">
+                    <span class="label">ЦЕНТРАЛЬНЫЙ ОФИС</span>
+                    <address>
+                        <p><strong>Основная специализация</strong><br>
+                            запчасти, шины, технические жидкости</p>
+                        <p><strong>Адрес:</strong><br>
+                            ул. Промышленная, 1</p>
+                        <p><strong>Режим работы</strong><br>
+                            с 9:00 до 18:00</p>
+                        <p><strong>Частота доставки</strong><br>
+                            2 раза в неделю</p>
+                    </address>
+                </div>
+            </section>
 		</main>
 		<footer class="footer">
 			<div class="container">
@@ -99,7 +107,9 @@
 		</footer>
 	</div>
 	<script src="assets/js/vendor.min.js" defer></script>
-	<script src="assets/js/app.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwvGEbk0_pNyOCyC0UhkMvw9FuBtcLcUM&callback=initMap"
+	async defer></script>
 </body>
 
 </html>

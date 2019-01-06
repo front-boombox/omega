@@ -1,9 +1,25 @@
 .map-block{
     padding: 0 40px;
     margin: 0 0 40px;
+    position: relative;
     @include media('<tablet') {
         padding: 0 15px;
         margin-bottom: 30px;
+    }
+    .select-holder{
+        position: absolute;
+        top: 19px;
+        left: 59px;
+        z-index: 1;
+        width: 100%;
+        max-width: 320px;
+        @include media('<tablet') {
+            top: 15px;
+            left: 30px;
+            right: 30px;
+            width: auto;
+            max-width: none;
+        }
     }
 }
 .map{
@@ -11,5 +27,37 @@
     border-radius: 8px;
     @include media('<tablet') {
         height: 480px;
+    }
+}
+.title-map{
+    font: 60px/1 map-get($base, 'bold-font-family');
+    letter-spacing: normal;
+    color: $blue;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin: 116px 0 30px;
+    @include media('<tablet') {
+        font-size: 30px;
+        margin: 30px 0;
+    }
+    .span{
+        @extend .icon-calendar-clock;
+        display: inline-block;
+        padding: 0 0 0 60px;
+        position: relative;
+        @include media('<tablet') {
+            padding-left: 35px;
+        }
+        &:before{
+            font: 48px 'icomoon';
+            position: absolute;
+            top: 6px;
+            left: 0;
+            @include media('<tablet') {
+                font-size: 30px;
+                top: 2px;
+            }
+        }
     }
 }
