@@ -8,12 +8,14 @@
         align-items: center;
         position: relative;
         padding: 0 0 59px;
+        min-width: 374px;
         @include media('<tablet') {
             padding: 0 15px 59px;
+            min-width: 300px;
         }
     }
     li{
-        margin: 0 27px;
+        margin: 0 17px;
         @include media('<tablet') {
             margin: 0 15px;
         }
@@ -70,19 +72,39 @@
                 }
             }
         }
-        &.active{
+        &:not(:first-child):not(:last-child){
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.active{
+                a{
+                    font: 18px/23px map-get($base, 'bold-font-family');
+                    width: 40px;
+                    height: 40px;
+                    background: $white;
+                    border: 4px solid $blue;
+                }
+            }
             a{
-                font: 18px/1.3 map-get($base, 'bold-font-family');
-                width: 40px;
-                height: 40px;
-                background: $white;
+                font-size: 18px;
                 border: 4px solid $blue;
+                &:hover{
+                    font: 18px/23px map-get($base, 'bold-font-family');
+                    width: 40px;
+                    height: 40px;
+                    background: $white;
+                    border-color: $blue;
+                    opacity: 1;
+                }
             }
         }
     }
     a{
-        @include animate(opacity);
+        @include animate(all);
         font-size: 0;
+        line-height: 23px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -14,6 +14,7 @@ import customScroll from './modules/custom-scroll';
 import countAnimate from './modules/count-animate';
 import customSelect from './modules/custom-select';
 import mapHandler from './modules/map';
+import paginationHandler from './modules/pagination';
 
 ( ($) => {
   'use strict';
@@ -31,6 +32,7 @@ import mapHandler from './modules/map';
     countAnimate.countAnimateInit();
     customSelect.customSelectInit();
     mapHandler.mapHandlerInit();
+    paginationHandler.paginationHandlerInit();
   });
 
 })(jQuery);

@@ -17,10 +17,23 @@ var mapHandler = {
                 mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
                 navigationControl: true,
                 navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapTypeControl: false
             };
 
             var map = new google.maps.Map(document.getElementById('map_canvas'), settings);
+            var companyLogo = new google.maps.MarkerImage('assets/images/marker.png',
+                new google.maps.Size(208,144),
+                new google.maps.Point(0,0),
+                new google.maps.Point(30,60)
+            );
+
+            var companyPos = new google.maps.LatLng(49.99142545, 36.27226607);
+            var companyMarker = new google.maps.Marker({
+                position: companyPos,
+                map: map,
+                icon: companyLogo
+            });
 
             var styles = [
                 {
